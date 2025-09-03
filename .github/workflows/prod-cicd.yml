@@ -70,6 +70,10 @@ jobs:
           fi
     
       - name: Run App On Port 8080
+        env:
+          MYSQL_URL: ${{ secrets.MYSQL_URL }}
+          MYSQL_USERNAME: ${{ secrets.MYSQL_USERNAME }}
+          MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
         run: |
           JAR_NAME="${{ steps.get_jar_name.outputs.JAR_NAME }}"
           DOWNLOADED_JAR="./downloaded-artifact/$JAR_NAME"
