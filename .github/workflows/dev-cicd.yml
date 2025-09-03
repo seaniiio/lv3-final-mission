@@ -3,7 +3,9 @@ name: dev CI Build and Test, EC2 CD
 on:
   push:
     branches: [ seaniiio ]
-
+  pull_request:
+    branches: [ seaniiio ]
+    
 jobs:
   build_and_test:
      runs-on: ubuntu-latest
