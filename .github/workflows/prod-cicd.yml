@@ -84,4 +84,4 @@ jobs:
           chmod +x "$TARGET_JAR"
 
           echo "Starting application..."
-          sudo nohup java -jar -Dspring.profiles.active=prod "$TARGET_JAR" > app.log 2>&1 &
+          sudo -E nohup java -jar -Dspring.profiles.active=prod "$TARGET_JAR" > app.log 2>&1 &
