@@ -35,7 +35,7 @@ jobs:
        uses: actions/upload-artifact@v4
        with:
          name: may
-         path: backend/build/libs/*SNAPSHOT.jar
+         path: build/libs/*SNAPSHOT.jar
 
   deploy:
     needs: build_and_test
