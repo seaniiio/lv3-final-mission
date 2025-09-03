@@ -2,7 +2,9 @@ name: prod CI, CD
 
 on:
   push:
-    branches: [ seaniiio ] # 테스트용
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build_and_test:
